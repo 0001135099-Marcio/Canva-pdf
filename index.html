@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Model Canvas - Sleepwear</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; padding: 20px; background: #fff; }
+        .canvas-title { text-align: center; color: #333; margin-bottom: 20px; }
+        
+        /* Estrutura do Grid do Canvas */
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, auto);
+            gap: 1px;
+            background-color: #333; /* Cor das linhas */
+            border: 2px solid #333;
+        }
+
+        .block { background: white; padding: 15px; min-height: 150px; }
+        .block h3 { margin: 0 0 10px 0; font-size: 17px; text-transform: uppercase; color: #555; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .block p { font-size: 17px; line-height: 1.4; color: #333; margin: 5px 0; }
+        .block ul { padding-left: 15px; margin: 0; }
+        .block li { font-size: 17px; margin-bottom: 5px; }
+
+        /* Ajustes de posicionamento das células */
+        .parcerias { grid-row: span 2; }
+        .atividades { grid-row: span 1; }
+        .recursos { grid-row: span 1; }
+        .oferta { grid-row: span 2; }
+        .relacionamento { grid-row: span 1; }
+        .canais { grid-row: span 1; }
+        .segmentos { grid-row: span 2; }
+        .custos { grid-column: span 2; }
+        .receitas { grid-column: span 3; }
+
+        @media print {
+            .no-print { display: none; }
+            body { padding: 0; }
+            .canvas-grid { width: 100%; height: 95vh; }
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="canvas-title">Modelo Canvas: Sleepwear (Projeto Rastreio QR)</h1>
+
+<div class="canvas-grid">
+    <div class="block parcerias">
+        <h3>🤝 Parcerias Chave</h3>
+        <ul>
+            <li>Fornecedores de tecnologia QR e hardware (Impressoras).</li>
+            <li>Fornecedores de tecidos integrados ao sistema.</li>
+            <li>Marketplaces de moda e logística.</li>
+        </ul>
+    </div>
+    
+    <div class="block atividades">
+        <h3>⚙️ Atividades Chave</h3>
+        <ul>
+            <li>Design de coleções.</li>
+            <li><b>Gestão do Sistema de Rastreio QR.</b></li>
+            <li>Controle de qualidade e enfesto.</li>
+        </ul>
+    </div>
+
+    <div class="block oferta">
+        <h3>💎 Oferta de Valor</h3>
+        <ul>
+            <li>Pijamas com <b>rastreabilidade total</b> (rolo à peça).</li>
+            <li>Garantia de padronização de lotes.</li>
+            <li>Transparência e confiança no pós-venda.</li>
+        </ul>
+    </div>
+
+    <div class="block relacionamento">
+        <h3>❤️ Relacionamento</h3>
+        <ul>
+            <li>Segurança via transparência produtiva.</li>
+            <li>Suporte técnico facilitado pelo QR da peça.</li>
+            <li>Fidelização por qualidade comprovada.</li>
+        </ul>
+    </div>
+
+    <div class="block segmentos">
+        <h3>👤 Segmentos de Clientes</h3>
+        <ul>
+            <li>Consumidores que valorizam conforto e origem têxtil.</li>
+            <li>Varejistas que exigem processos auditáveis.</li>
+        </ul>
+    </div>
+
+    <div class="block recursos">
+        <h3>🛠️ Recursos Chave</h3>
+        <ul>
+            <li>Software/Hardware SRQ.</li>
+            <li>Mão de obra treinada em tecnologia.</li>
+            <li>Matéria-prima certificada.</li>
+        </ul>
+    </div>
+
+    <div class="block canais">
+        <h3>🚚 Canais</h3>
+        <ul>
+            <li>E-commerce próprio.</li>
+            <li>Redes Sociais.</li>
+            <li><b>O próprio QR Code na etiqueta como canal.</b></li>
+        </ul>
+    </div>
+
+    <div class="block custos">
+        <h3>💰 Estrutura de Custos</h3>
+        <ul>
+            <li>Tecnologia (Impressoras/Etiquetas/Software).</li>
+            <li>Matéria-prima e Fabricação.</li>
+            <li>Marketing e Logística.</li>
+        </ul>
+    </div>
+
+    <div class="block receitas">
+        <h3>💵 Fontes de Receita</h3>
+        <ul>
+            <li>Venda direta (B2C) e Atacado (B2B).</li>
+            <li>Valor agregado pela tecnologia de rastreio (Preço Premium).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="no-print" style="margin-top: 20px; text-align: center;">
+    <button onclick="window.print()" style="padding: 10px 30px; font-size: 16px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px;">
+        Clique aqui para Gerar PDF / Imprimir
+    </button>
+</div>
+
+</body>
+</html>
