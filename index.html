@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <title>Business Model Canvas - Sleepwear</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; padding: 20px; background: #fff; }
-        .canvas-title { text-align: center; color: #333; margin-bottom: 20px; }
+        /* Correção 1: Garante que bordas e preenchimentos não vazem o tamanho estipulado */
+        * { box-sizing: border-box; }
+
+        /* Correção 2: Zeramos a margin padrão do navegador */
+        body { font-family: 'Segoe UI', Arial, sans-serif; padding: 20px; margin: 0; background: #fff; }
+        
+        .canvas-title { text-align: center; color: #333; margin-top: 0; margin-bottom: 15px; }
         
         /* Estrutura do Grid do Canvas */
         .canvas-grid {
@@ -21,7 +26,7 @@
         .block h3 { margin: 0 0 10px 0; font-size: 17px; text-transform: uppercase; color: #555; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         .block p { font-size: 17px; line-height: 1.4; color: #333; margin: 5px 0; }
         .block ul { padding-left: 15px; margin: 0; }
-        .block li { font-size: 17px; margin-bottom: 5px; }
+        .block li { font-size: 16px; margin-bottom: 5px; } /* Ajustado levemente o tamanho da fonte */
 
         /* Ajustes de posicionamento das células */
         .parcerias { grid-row: span 2; }
@@ -34,10 +39,24 @@
         .custos { grid-column: span 2; }
         .receitas { grid-column: span 3; }
 
+        /* REGRAS ESPECÍFICAS PARA IMPRESSÃO / PDF */
         @media print {
+            @page {
+                size: A3 landscape; /* Define para A3 deitado */
+                margin: 10mm;       /* Margem de segurança de 1cm */
+            }
+
+            /* Correção 3: Esconde a barra de rolagem e bloqueia página extra */
+            body { 
+                padding: 0; 
+                margin: 0; 
+                overflow: hidden; 
+            }
+            
             .no-print { display: none; }
-            body { padding: 0; }
-            .canvas-grid { width: 100%; height: 95vh; }
+            
+            /* Correção 4: Reduzimos de 95vh para 85vh para sobrar espaço exato para o Título */
+            .canvas-grid { width: 100%; height: 85vh; }
         }
     </style>
 </head>
